@@ -62,6 +62,8 @@ status=$?
 echo "status=${status}" >> "${GITHUB_OUTPUT}"
 echo "report=${output}" >> "${GITHUB_OUTPUT}"
 
+echo "${output}" >> "${GITHUB_STEP_SUMMARY}"
+
 cat "${output}"
 echo "exit status ${status}"
 exit $status
