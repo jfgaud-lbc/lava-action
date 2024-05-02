@@ -8,6 +8,7 @@ jobs:
   test:
     env:
       WANT_STATUS: 103 # ExitCodeHigh
+      NO_COLOR: true
     name: Test
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +34,7 @@ jobs:
     env:
       WANT_MIN_STATUS: 100 # ExitCodeInfo
       WANT_MAX_STATUS: 104 # ExitCodeCritical
+      NO_COLOR: true
     name: Test defaults
     runs-on: ubuntu-latest
     steps:
@@ -54,6 +56,7 @@ jobs:
   test-release:
     env:
       WANT_STATUS: 103 # ExitCodeHigh
+      NO_COLOR: true
     name: Test release download
     runs-on: ubuntu-latest
     steps:
@@ -78,6 +81,7 @@ jobs:
   test-branch:
     env:
       WANT_STATUS: 103 # ExitCodeHigh
+      NO_COLOR: true
     name: Test "go install" fallback
     runs-on: ubuntu-latest
     steps:
